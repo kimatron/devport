@@ -37,6 +37,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  const themeSwitch = document.getElementById('theme-switch');
+
+  themeSwitch.addEventListener('change', () => {
+    document.body.classList.toggle('light-mode');
+  });
+
   const cursor = document.querySelector('.cursor');
 
   document.addEventListener('mousemove', (e) => {

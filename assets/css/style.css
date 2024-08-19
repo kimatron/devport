@@ -7,6 +7,59 @@
   --navbar-bg: rgba(17, 24, 39, 0.9);
 }
 
+
+.light-mode {
+  --primary-color: #6d28d9;
+  --secondary-color: #5b21b6;
+  --background-color: #f3f4f6;
+  --text-color: #111827;
+  --card-bg: #ffffff;
+}
+
+.theme-toggle {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+#theme-switch {
+  display: none;
+}
+
+.theme-toggle label {
+  cursor: pointer;
+  padding: 5px;
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60px;
+  height: 30px;
+  position: relative;
+}
+
+.theme-toggle label i {
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.theme-toggle label::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  transition: 0.3s;
+}
+
+#theme-switch:checked+label::after {
+  transform: translateX(30px);
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--background-color);

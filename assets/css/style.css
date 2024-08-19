@@ -19,6 +19,24 @@ body {
   padding: 0 2rem;
 }
 
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease;
+  z-index: 9999;
+}
+
+.cursor-grow {
+  transform: translate(-50%, -50%) scale(2.5);
+  background-color: rgba(124, 58, 237, 0.2);
+  border: none;
+}
+
 /* Improved Navbar */
 .navbar {
   background-color: var(--navbar-bg);

@@ -37,6 +37,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  const cursor = document.querySelector('.cursor');
+
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+
+  document.addEventListener('mousedown', () => {
+    cursor.classList.add('cursor-grow');
+  });
+
+  document.addEventListener('mouseup', () => {
+    cursor.classList.remove('cursor-grow');
+  });
+
+  document.querySelectorAll('a, button').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      cursor.classList.add('cursor-grow');
+    });
+    item.addEventListener('mouseleave', () => {
+      cursor.classList.remove('cursor-grow');
+    });
+  });
+
   // Add animation to section titles
   const sectionTitles = document.querySelectorAll('h2');
   const observerOptions = {

@@ -136,3 +136,37 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(statsSection);
   }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const skillCategories = document.querySelectorAll('.skill-category');
+
+  skillCategories.forEach(category => {
+    category.addEventListener('mouseenter', () => {
+      category.querySelector('.skill-icon').style.transform = 'scale(1.2) rotate(360deg)';
+    });
+
+    category.addEventListener('mouseleave', () => {
+      category.querySelector('.skill-icon').style.transform = 'scale(1) rotate(0deg)';
+    });
+  });
+
+  // Animate skill tags on scroll
+  const skillTags = document.querySelectorAll('.skill-tag');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  skillTags.forEach(tag => {
+    tag.style.opacity = '0';
+    tag.style.transform = 'translateY(20px)';
+    tag.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(tag);
+  });
+});

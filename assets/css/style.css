@@ -554,6 +554,21 @@ h2:hover::after {
   }
 }
 
+#blogCarousel .carousel-item {
+  padding: 20px;
+}
+
+#blogCarousel .carousel-control-prev,
+#blogCarousel .carousel-control-next {
+  width: 5%;
+}
+
+#blogCarousel .carousel-control-prev-icon,
+#blogCarousel .carousel-control-next-icon {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
 /* Button styles */
 .btn-primary {
   background-color: var(--accent-color);

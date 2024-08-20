@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="From Diver to Developer: A Career Transition Story">
+  <meta name="keywords"
+    content="career transition, scuba diving, software development, full stack developer, Kim Hanlon">
+  <title>From Diver to Developer: A Career Transition Story - Kim Hanlon</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/blog.css">
+</head>
+
+<body>
+  <!-- <div class="cursor"></div> -->
+  <div class="background-animation">
+    <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5">
+          <animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate>
+          <stop offset="0%" stop-color="rgba(124, 58, 237, 0.3)"></stop>
+          <stop offset="100%" stop-color="rgba(124, 58, 237, 0)"></stop>
+        </radialGradient>
+        <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5">
+          <animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate>
+          <stop offset="0%" stop-color="rgba(91, 33, 182, 0.3)"></stop>
+          <stop offset="100%" stop-color="rgba(91, 33, 182, 0)"></stop>
+        </radialGradient>
+      </defs>
+      <rect x="0" y="0" width="100" height="100" fill="url(#Gradient1)">
+        <animate attributeName="x" dur="20s" values="25;0;25" repeatCount="indefinite" />
+        <animate attributeName="y" dur="21s" values="0;25;0" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="17s"
+          repeatCount="indefinite" />
+      </rect>
+      <rect x="0" y="0" width="100" height="100" fill="url(#Gradient2)">
+        <animate attributeName="x" dur="23s" values="-25;0;-25" repeatCount="indefinite" />
+        <animate attributeName="y" dur="24s" values="0;-25;0" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="18s"
+          repeatCount="indefinite" />
+      </rect>
+    </svg>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <!-- <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch" />
+        <label for="theme-switch">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+        </label>
+      </div> -->
+      <a class="navbar-brand" href="#">Kim Hanlon</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="blog-post">
+    <div class="container">
+      <article>
+        <header class="blog-header">
+          <h1>Git-ting Started: Version Control for the Chronically Disorganized</h1>
+          <div class="blog-meta">
+            <span class="blog-date"><i class="far fa-calendar-alt"></i> September 1, 2024</span>
+            <span class="blog-author"><i class="far fa-user"></i> Kim Hanlon</span>
+          </div>
+        </header>
+
+        <div class="blog-image-card">
+          <img src="media/messydesk.jpg" alt="A messy desk transforming into an organized workspace" class="blog-image">
+        </div>
+
+        <div class="blog-content">
+          <p>As someone who once lost an entire wetsuit in a studio apartment (don't ask), I understand the struggles of
+            the organizationally challenged. But fear not, fellow chaos enthusiasts! Today, we're diving into the world
+            of Git, a version control system that's about to become your new best friend – or at least, the friend who
+            always remembers where you left your keys.</p>
+
+          <h2>What is Git? Think Digital Time Machine</h2>
+          <p>Git is a version control system, which is a fancy way of saying it's like a time machine for your code (or
+            any text-based projects, really). Imagine if you could save a snapshot of your work at any point, then jump
+            back to that exact moment whenever you wanted. That's Git in a nutshell.</p>
+          <p>It's like having a magic "undo" button for life. Accidentally deleted half your thesis? Git's got your
+            back. Wish you could return to a time before you tried to give yourself bangs? Well, Git can't help with
+            that, but maybe it'll inspire you to take more before-and-after photos.</p>
+
+          <h2>Repositories: Your Project's Home Sweet Home</h2>
+          <p>In Git, your project lives in a "repository" (or "repo" for short). Think of it as a super-smart folder
+            that not only stores your files but also remembers every change you've ever made. It's like that friend who
+            always remembers your embarrassing stories, but way more useful.</p>
+
+          <h2>Commits: Snapshots in Time</h2>
+          <p>When you make changes to your project and want to save them, you make a "commit". This is like taking a
+            snapshot of your project at that moment in time. Each commit comes with a message where you explain what
+            changes you made. </p>
+          <p>Pro tip: "Made some changes" is not a helpful commit message. "Fixed the bug where the program set itself
+            on fire" is much better. Your future self will thank you.</p>
+
+          <h2>Branches: Parallel Universes for Your Code</h2>
+          <p>Branches in Git are like parallel universes for your project. Want to try out a crazy new feature without
+            messing up your main project? Create a branch! It's like having a "What If?" machine for your code.</p>
+          <p>The main branch is typically called "master" or "main". Think of it as the trunk of a tree. Other branches
+            sprout off from it, and can be merged back in when you're happy with the changes. It's much neater than my
+            old system of having 50 copies of the same file with names like
+            "final_version_really_final_this_time_v3.doc".</p>
+
+          <h2>Merging: Bringing It All Together</h2>
+          <p>When you're done experimenting on a branch and want to bring those changes back to your main project, you
+            "merge" the branches. Git is pretty smart about combining changes, but sometimes it needs your help to
+            resolve "merge conflicts". </p>
+          <p>Resolving merge conflicts is like being a referee in a code disagreement. "No, we can't have both 'Hello,
+            World!' and 'Goodbye, Cruel World!' as the output. Let's compromise with 'Hello, Somewhat Indifferent
+            World!'"</p>
+
+          <h2>Remote Repositories: Sharing is Caring</h2>
+          <p>Git isn't just for solo use. You can have "remote" repositories stored on servers (like GitHub or GitLab)
+            that let you share your code with others. It's like a social network for your projects, minus the cat videos
+            and political arguments.</p>
+          <p>This is great for collaboration, backup, and showing off. "Oh, this old thing? Just a little 10,000-line
+            program I whipped up. No big deal." (Pro tip: This works better for impressing fellow developers than for
+            first dates.)</p>
+
+          <h2>Why Git Matters for Non-Developers</h2>
+          <p>You might be thinking, "I'm not a coder. Why should I care about Git?" Well, version control isn't just for
+            code. You can use Git for any text-based project: writing a novel, managing recipes, tracking changes to
+            important documents. </p>
+          <p>Imagine never losing an old version of your resume again, or being able to see exactly what changes your
+            colleague made to that shared report. It's like having a superpower, but instead of flying, you're really
+            good at keeping track of files.</p>
+
+          <h2>Conclusion: Git-ting Ahead in Life</h2>
+          <p>As we emerge from our Git immersion (remember to decompress slowly to avoid the bends), I hope you've
+            gained an appreciation for this powerful tool. Whether you're a developer, a writer, or just someone who's
+            tired of filename suffixes like "_final_final_REALLY_FINAL.doc", Git can bring some order to your digital
+            life.</p>
+          <p>Remember, every master Git user started as a beginner. So don't be afraid to dive in and start committing.
+            And if you make a mistake? Well, that's what the magic "undo" button is for.</p>
+          <p>Now if you'll excuse me, I'm off to create a Git repository for my socks. Maybe then I'll finally be able
+            to find a matching pair!</p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/blogdivein/" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/kimatronzyborg" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/kimhanlon291354" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/kimatron" class="social-icon"><i class="fab fa-github"></i></a>
+        <a href="mailto:kim@kimatron.tech?subject=Inquiry" class="social-icon"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p>&copy; 2024 Kim Hanlon. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

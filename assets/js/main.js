@@ -272,3 +272,10 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.blog-content').prepend(toc);
   }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  var blogCarousel = new bootstrap.Carousel(document.getElementById('blogCarousel'), {
+    interval: 5000,
+    wrap: true
+  });
+});

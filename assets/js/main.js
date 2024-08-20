@@ -200,3 +200,75 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(tag);
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Existing code...
+
+  // Blog-specific enhancements
+  if (document.querySelector('.blog-post')) {
+    // Animate blog header on scroll
+    const blogHeader = document.querySelector('.blog-header');
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 50) {
+        blogHeader.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+        blogHeader.style.opacity = 1 - scrollPosition / 300;
+      } else {
+        blogHeader.style.transform = 'translateY(0)';
+        blogHeader.style.opacity = 1;
+      }
+    });
+
+    // Add parallax effect to blog image
+    const blogImage = document.querySelector('.blog-image');
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY;
+      blogImage.style.transform = `translateY(${scrollPosition * 0.2}px)`;
+    });
+
+    // Animate blog content sections on scroll
+    const contentSections = document.querySelectorAll('.blog-content > *');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    contentSections.forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(20px)';
+      section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(section);
+    });
+
+    // Add reading time estimate
+    const articleText = document.querySelector('.blog-content').innerText;
+    const wordCount = articleText.split(/\s+/).length;
+    const readingTime = Math.ceil(wordCount / 200); // Assuming 200 words per minute
+    const readingTimeElement = document.createElement('span');
+    readingTimeElement.classList.add('reading-time');
+    readingTimeElement.innerHTML = `<i class="far fa-clock"></i> ${readingTime} min read`;
+    document.querySelector('.blog-meta').appendChild(readingTimeElement);
+
+    // Add table of contents
+    const headings = document.querySelectorAll('.blog-content h2');
+    const toc = document.createElement('div');
+    toc.classList.add('table-of-contents');
+    toc.innerHTML = '<h3>Table of Contents</h3><ul></ul>';
+    headings.forEach((heading, index) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.textContent = heading.textContent;
+      a.href = `#heading-${index}`;
+      li.appendChild(a);
+      toc.querySelector('ul').appendChild(li);
+      heading.id = `heading-${index}`;
+    });
+    document.querySelector('.blog-content').prepend(toc);
+  }
+});
